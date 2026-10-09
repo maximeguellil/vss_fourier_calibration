@@ -1,0 +1,49 @@
+# Deny by default. Only the collaboration scope below is tracked.
+*
+
+# Repository configuration and documentation.
+!.gitignore
+!.gitattributes
+!.python-version
+!README.md
+!pyproject.toml
+!uv.lock
+
+# GitHub collaboration configuration.
+!.github/
+!.github/**
+
+# Lightweight repository validation.
+!scripts/
+!scripts/**
+
+# Python package: source files only.
+!src/
+!src/**/
+!src/**/*.py
+
+# Selected two-year calibration and validation notebooks.
+!vss_calibration_CACIB_SP500_SX5E_skew_vars_vols_2y.ipynb
+!vss_calibration_CACIB_SP500_SX5E_skew_vars_cvc_2y.ipynb
+!vss_joint_calibration_CACIB_SP500_SX5E_skew_vars_cvc_2y.ipynb
+!vss_fourier_sanity_check.ipynb
+!vss_fractional_atm_skew.ipynb
+
+# Figures associated with the selected notebooks.
+!Plots vss_calibration_CACIB_SP500_SX5E_skew_vars_vols_2y/
+!Plots vss_calibration_CACIB_SP500_SX5E_skew_vars_vols_2y/**
+!Plots vss_calibration_CACIB_SP500_SX5E_skew_vars_cvc_2y/
+!Plots vss_calibration_CACIB_SP500_SX5E_skew_vars_cvc_2y/**
+!Plots vss_joint_calibration_CACIB_SP500_SX5E_skew_vars_cvc_2y/
+!Plots vss_joint_calibration_CACIB_SP500_SX5E_skew_vars_cvc_2y/**
+!Plots vss_fourier_sanity_check/
+!Plots vss_fourier_sanity_check/**
+!Plots vss_fractional_atm_skew/
+!Plots vss_fractional_atm_skew/**
+
+# Never track local or generated metadata, even inside an allowed directory.
+**/.DS_Store
+**/.ipynb_checkpoints/
+**/__pycache__/
+**/*.py[cod]
+**/.venv/

@@ -1,0 +1,9 @@
+*.py text eol=lf
+*.toml text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.ipynb text eol=lf
+*.lock text eol=lf
+*.png binary
+*.xlsx binary

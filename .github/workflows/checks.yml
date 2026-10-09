@@ -1,0 +1,36 @@
+name: Repository checks
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v10.2.0
+        with:
+          version: "0.12.5"
+          enable-cache: true
+
+      - name: Install Python and project
+        run: |
+          uv python install 3.12
+          uv sync --frozen
+
+      - name: Validate repository scope and notebooks
+        run: uv run python scripts/check_repository.py
+
+      - name: Compile Python sources
+        run: uv run python -m compileall -q src
+
+      - name: Import package
+        run: uv run python -c "import vss"
