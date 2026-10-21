@@ -24,6 +24,7 @@ ALLOWED_ROOT_FILES = {
     "README.md",
     "pyproject.toml",
     "uv.lock",
+    "vss_with_jump_implementation.md",
     *{path for path in EXPECTED_NOTEBOOKS if "/" not in path},
 }
 
