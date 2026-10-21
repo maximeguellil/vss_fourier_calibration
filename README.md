@@ -11,7 +11,10 @@ complete Git history.
 ## Repository contents
 
 - `src/vss`: reusable calibration, Fourier, kernel, market-data and Monte Carlo
-  code;
+  code, including Gaussian common/idiosyncratic jump transforms and
+  simulations;
+- `vss_with_jump_implementation.md`: model specification and implementation
+  guide for the Gaussian jump extension;
 - `vss_calibration_CACIB_SP500_SX5E_skew_vars_vols_2y.ipynb`: sequential
   variance-swap, ATM-skew and volatility-swap calibrations;
 - `vss_calibration_CACIB_SP500_SX5E_skew_vars_cvc_2y.ipynb`: sequential
